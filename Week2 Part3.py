@@ -27,19 +27,25 @@ def multiplication(r, c, N):
     return (A)
 
 
-def final(r, c, N):
+def multiplication_Sc(r, c, N):
     Bmatrix = creating_Matrix(r, c, N)
     Cmatrix = creating_Matrix(r, c, N)
-    multi = multiplication(r, c, N)
     add = addition(r, c, N)
     A = [[0] * r for i in range(c)]
     for row in range(len(Bmatrix)):
         for column in range (len(Cmatrix[row])):
-            A[row][column] = multi[row][column] - 2*add[row][column]
+            A[row][column] = 2*add[row][column]
     return (A)
-print (final(3, 3, 2))
-    
 
-# addition reference: http://stackoverflow.com/questions/19897212/adding-two-matrices-in-python
+def result(r, c, N):
+    Bmatrix = creating_Matrix(r, c, N)
+    Cmatrix = creating_Matrix(r, c, N)
+    multi = multiplication(r, c, N)
+    multi_Sc = multiplication_Sc(r, c, N)
+    A = [[0] * r for i in range(c)]
+    for row in range(len(Bmatrix)):
+        for column in range (len(Cmatrix[row])):
+            A[row][column] = multi[row][column] - multi_Sc[row][column]
+    return (A)
 
-
+print (result(3, 3, 2))
