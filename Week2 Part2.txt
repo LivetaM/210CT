@@ -1,0 +1,45 @@
+def find_Factorial(n):  On
+    if n==0: 							(1)
+        return (1)						(1)
+    else:							(1)
+        factorial = n*find_Factorial(n-1)			(n)
+        return(factorial) 					(1)
+
+def reverse_Factorial(n):
+    f = find_Factorial(n)					(1)
+    string = str(f)						(1)
+    sList = string.split(" ")					(n times)
+    return (''.join(reversed(string)))				(n times)
+
+def trailing_Zeros(n):
+    reversed_String = reverse_Factorial(n)			(1)
+    count = 0							(1)
+    number = '123456789'					(1)
+    for i in reversed_String:					(n times)
+        if i == '0':						(n times)
+            count = count + 1					(n times)
+        elif i in number:					(n times)
+            break						(n times)
+    return count						(1)
+        
+
+print (trailing_Zeros(20))					(1)
+
+
+https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
+
+
+import random
+def shuffle(givenList):
+    new_List = []
+    list_Index = len(givenList) - 1 									(1)
+
+    if len(givenList) < 2: 										(1)
+        print ("This array is too short to shuffle, please enter more integers!")                       (1)
+    while list_Index != 0:										(n)
+        newIndex = random.randint(0,len(givenList)-1)							(n)
+	givenList[newIndex],givenList[list_Index] = givenList[list_Index],givenList[newIndex]		(n)
+        list_Index = list_Index - 1									(n)
+    return (givenList)											(1)
+        
+print (shuffle([5,3,8,6,1,9,2,7])) #prints out the new list
