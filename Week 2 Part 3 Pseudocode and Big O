@@ -2,9 +2,9 @@ CREATING-MATRIX(r, c, N)
 matrixN <- []
 for x <- 0 to r                                                                                               (n)
 	row <- []
-	for y <- 0 to c                                                                                             (n)
-		append N to row                                                                                           (n*n)
-	append row to matrixN                                                                                       (1)
+	for y <- 0 to c                                                                                       (n)
+		append N to row                                                                               (n*n)
+	append row to matrixN                                                                                 (1)
 return matrixN                                                                                                
 ADDITION(r, c, N)
     Bmatrix <- CREATING-MATRIX(r, c, N)
