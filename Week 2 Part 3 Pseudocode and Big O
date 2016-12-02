@@ -1,0 +1,50 @@
+CREATING-MATRIX(r, c, N) 
+matrixN <- []
+for x <- 0 to r                                                                                               (n)
+	row <- []
+	for y <- 0 to c                                                                                             (n)
+		append N to row                                                                                           (n*n)
+	append row to matrixN                                                                                       (1)
+return matrixN                                                                                                
+ADDITION(r, c, N)
+    Bmatrix <- CREATING-MATRIX(r, c, N)
+    Cmatrix <- CREATING-MATRIX(r, c, N)
+    A <- [[0] * r for i <- 0 to c]
+    for row <- 0 to length of Bmatrix                                                                          (n)
+        for column <- 0 to length of Cmatrix[row]                                                              (n*n)
+            A[row][column] <- Bmatrix[row][column] + Cmatrix[row][column]                                      (n*n)
+    return A                                                                                                    
+MULTIPLICATION(r, c, N)
+    Bmatrix <- CREATING-MATRIX(r, c, N)
+    Cmatrix <- CREATING-MATRIX(r, c, N)
+    A <- [[0] * r for i <- 0 to c]
+    for row <- 0 to length of Bmatrix                                                                           (n)
+        for column <- 0 to length of Cmatrix[row]                                                               (n*n)
+            for row2 <- 0 to length of Bmatrix[0]                                                               (n*n*n)
+                A[row][column] <- A[row][column] + (Bmatrix[row][row2] * Cmatrix[row2][column])                 (n*n*n)
+    return A
+
+MULTIPLICATION-SC(r, c, N)
+    Bmatrix <- CREATING-MATRIX(r, c, N)
+    Cmatrix <- CREATING-MATRIX(r, c, N)
+    add = ADDITION(r, c, N)
+    A <- [[0] * r for i <- 0 to c]
+    for row <- 0 to length of Bmatrix                                                                           (n)
+        for column <- 0 to length of Cmatrix[row]                                                               (n*n)
+                A[row][column] <- 2 * add[row][column]                                                          (n*n)
+    return A
+
+RESULT(r, c, N)
+    Bmatrix <- CREATING-MATRIX(r, c, N)
+    Cmatrix <- CREATING-MATRIX(r, c, N)
+    multi <- MULTIPLICATION(r, c, N)
+    multi_Sc <- MULTIPLICATION_SC(r, c, N)
+    A <- [[0] * r for i <- 0 to c]
+    for row <- 0 to length of Bmatrix                                                                           (n)
+        for column <- 0 to length of Cmatrix[row]                                                               (n*n)
+            A[row][column] <- multiI[row][column] – multi_Sc[row][column]                                       (n*n)
+    return A
+
+
+Algorithms creating Matrix, addition, multiplication sc and result are O(n^2).
+Algorithm multiplication is a O(n^3).
