@@ -9,3 +9,6 @@ def longest_Sub_Seq(seq):
 
 print (longest_Sub_Seq([1,1,2,3,4,1,2]))
 
+Reference:
+(http://stackoverflow.com/questions/40667713/extracting-the-subsequence-of-maximum-length-from-a-sequence-python)
+Explanation from the bottom of the page.
