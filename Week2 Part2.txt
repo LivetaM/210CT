@@ -1,4 +1,5 @@
-def find_Factorial(n):  On
+PART 2:
+def find_Factorial(n):  					On 
     if n==0: 							(1)
         return (1)						(1)
     else:							(1)
@@ -26,9 +27,7 @@ def trailing_Zeros(n):
 print (trailing_Zeros(20))					(1)
 
 
-https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
-
-
+PART 1:
 import random
 def shuffle(givenList):
     new_List = []
@@ -42,4 +41,4 @@ def shuffle(givenList):
         list_Index = list_Index - 1									(n)
     return (givenList)											(1)
         
-print (shuffle([5,3,8,6,1,9,2,7])) #prints out the new list
+print (shuffle([5,3,8,6,1,9,2,7])) #prints out the new list						(1)
