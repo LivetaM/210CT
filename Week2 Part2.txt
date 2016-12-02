@@ -26,10 +26,12 @@ def trailing_Zeros(n):				   run-time is O(n)
 
 print (trailing_Zeros(20))					(1)
 
+All functions have got Big O of O(n), that means this algorithm Big O is a O(n).
+
 
 PART 1:
 import random
-def shuffle(givenList):								            run-time is O(n)
+def shuffle(givenList):								            
     new_List = []
     list_Index = len(givenList) - 1 									(1)
 
@@ -42,3 +44,7 @@ def shuffle(givenList):								            run-time is O(n)
     return (givenList)											(1)
         
 print (shuffle([5,3,8,6,1,9,2,7])) #prints out the new list						(1)
+
+5 + 4n. We remove constants and we get O(n).
+The Big O of this algorithm is O(n).
+
