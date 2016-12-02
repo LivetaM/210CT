@@ -1,18 +1,18 @@
 PART 2:
-def find_Factorial(n):  					On 
+def find_Factorial(n):  			   run-time is O(n) 
     if n==0: 							(1)
         return (1)						(1)
     else:							(1)
         factorial = n*find_Factorial(n-1)			(n)
         return(factorial) 					(1)
 
-def reverse_Factorial(n):
+def reverse_Factorial(n):			   run-time is O(n)
     f = find_Factorial(n)					(1)
     string = str(f)						(1)
     sList = string.split(" ")					(n times)
     return (''.join(reversed(string)))				(n times)
 
-def trailing_Zeros(n):
+def trailing_Zeros(n):				   run-time is O(n)
     reversed_String = reverse_Factorial(n)			(1)
     count = 0							(1)
     number = '123456789'					(1)
@@ -29,7 +29,7 @@ print (trailing_Zeros(20))					(1)
 
 PART 1:
 import random
-def shuffle(givenList):
+def shuffle(givenList):								            run-time is O(n)
     new_List = []
     list_Index = len(givenList) - 1 									(1)
 
